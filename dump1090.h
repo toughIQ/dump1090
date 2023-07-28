@@ -371,6 +371,7 @@ struct stModes {                             // Internal state
     unsigned int stat_blocks_processed;
     unsigned int stat_blocks_dropped;
 };
+extern struct stModes Modes; extern struct stDF tDF;
 
 // The struct we use to store information about a decoded message.
 struct modesMessage {
