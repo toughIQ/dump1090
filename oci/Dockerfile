@@ -1,10 +1,1 @@
-FROM debian:bookworm-slim
-
-RUN apt-get update && apt-get upgrade -y && apt-get install -y git make build-essential pkg-config rtl-sdr librtlsdr-dev
-
-RUN git clone https://github.com/toughIQ/dump1090.git 
-WORKDIR /dump1090
-
-RUN make
-
-
+Dockerfile.ubuntu
