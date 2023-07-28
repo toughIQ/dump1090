@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y git make build-essential pkg-config rtl-sdr librtlsdr-dev
 
