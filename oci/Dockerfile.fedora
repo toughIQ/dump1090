@@ -1,6 +1,6 @@
-FROM debian:latest
+FROM fedora:latest
 
-RUN apt-get update && apt-get install -y git make build-essential pkg-config rtl-sdr librtlsdr-dev
+RUN dnf install -y git make @development-tools rtl-sdr-devel
 
 RUN git clone https://github.com/toughIQ/dump1090.git 
 WORKDIR /dump1090
