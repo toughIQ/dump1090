@@ -11,4 +11,6 @@ WORKDIR /dump1090
 
 RUN make
 
+CMD ["./dump1090", "--net"]
+
 
