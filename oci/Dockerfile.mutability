@@ -1,0 +1,14 @@
+FROM debian:bookworm-slim
+
+RUN apt-get update  \
+    && apt-get upgrade -y \
+    && apt-get install -y git make build-essential pkg-config rtl-sdr librtlsdr-dev librtlsdr-dev libusb-1.0-0-dev debhelper \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN git clone https://github.com/adsb-related-code/dump1090-mutability.git
+WORKDIR /dump1090-mutability
+
+RUN dpkg-buildpackage -b
+
+
